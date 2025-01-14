@@ -3,8 +3,10 @@ import moonIcon from '../../assets/icon-moon.svg';
 import sunIcon from '../../assets/icon-sun.svg';
 import styles from './ThemeSwitcher.module.scss';
 
-const MoonIcon = () => <img src={moonIcon} className='icon' width='20' height='20' />;
-const SunIcon = () => <img src={sunIcon} className='icon' width='20' height='20' />;
+const MoonIcon = () => (
+   <img src={moonIcon} alt='icon moon' className='icon' width='30' height='30' />
+);
+const SunIcon = () => <img src={sunIcon} alt='icon sun' className='icon' width='30' height='30' />;
 
 const ThemeSwitcher = () => {
    const [isDark, setDark] = useState(false);
