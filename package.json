@@ -1,5 +1,6 @@
 {
    "name": "ghub-user-finder",
+   "homepage": "https://demargorn.github.io/ghub-user-finder_react-ts-vite/",
    "private": true,
    "version": "1.0.0",
    "type": "module",
