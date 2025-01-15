@@ -1,6 +1,6 @@
 import { TypeGithubUser, TypeLocalGithubUser } from '../types';
 
-const extractLocalUser = (user: TypeGithubUser): TypeLocalGithubUser => ({
+export const extractLocalUser = (user: TypeGithubUser): TypeLocalGithubUser => ({
    login: user.login,
    avatar: user.avatar_url,
    name: user.name,
@@ -14,5 +14,3 @@ const extractLocalUser = (user: TypeGithubUser): TypeLocalGithubUser => ({
    repos: user.public_repos,
    twitter: user.twitter_username,
 });
-
-export default extractLocalUser;

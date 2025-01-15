@@ -11,16 +11,16 @@ type TypeFormFields = {
    username: HTMLInputElement;
 };
 
-const SearchIcon = () => <img src={searchIcon} alt='icon search' width='30' height='30' />;
+const SearchIcon = () => <img src={searchIcon} className={styles['icon']} alt='icon search' />;
 
 const SearchField = ({ hasError, onSubmit }: ISearchProps) => {
-   const handleSubmit = (event: React.FormEvent<HTMLFormElement & TypeFormFields>) => {
-      event.preventDefault();
-      const text = event.currentTarget.username.value;
+   const handleSubmit = (e: React.FormEvent<HTMLFormElement & TypeFormFields>) => {
+      e.preventDefault();
+      const text = e.currentTarget.username.value;
 
       if (text.trim()) {
          onSubmit(text);
-         event.currentTarget.reset();
+         e.currentTarget.reset();
       }
    };
 

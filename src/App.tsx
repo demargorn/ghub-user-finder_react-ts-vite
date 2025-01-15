@@ -1,12 +1,11 @@
 import { useState } from 'react';
+import { TypeGithubError, TypeGithubUser, TypeLocalGithubUser } from './types';
+import { extractLocalUser, isGithubUser } from './utils';
+import defaultUser from './mock';
 import Container from './components/Container/Container';
 import Header from './components/Header/Header';
 import SearchField from './components/SearchField/SearchField';
 import UserCard from './components/UserCard/UserCard';
-import defaultUser from './mock';
-import { TypeGithubError, TypeGithubUser, TypeLocalGithubUser } from './types';
-import extractLocalUser from './utils/exract-local-user';
-import isGithubUser from './utils/typeguards';
 
 const BASE_URL = 'https://api.github.com/users/';
 
@@ -15,7 +14,7 @@ const App = () => {
 
    const fetchUser = async (username: string) => {
       const url = BASE_URL + username;
-      
+
       const res = await fetch(url);
       const user = (await res.json()) as TypeGithubUser | TypeGithubError;
 

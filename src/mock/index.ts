@@ -8,7 +8,7 @@ const defaultUser: TypeLocalGithubUser = {
    blog: 'zero@gmail.com',
    location: 'RUS',
    bio: 'React Developer',
-   twitter: '',
+   twitter: 'none',
    repos: 59,
    followers: 2,
    following: 25,

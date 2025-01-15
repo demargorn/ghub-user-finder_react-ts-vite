@@ -1,24 +1,31 @@
+import { TypeLocalGithubUser } from '../../types';
 import companyIcon from '../../assets/icon-company.svg';
 import locationIcon from '../../assets/icon-location.svg';
 import twitterIcon from '../../assets/icon-twitter.svg';
 import blogIcon from '../../assets/icon-website.svg';
 import InfoItem, { IInfoItemProps } from '../InfoItem/InfoItem';
-import { TypeLocalGithubUser } from '../../types';
 import styles from './UserInfo.module.scss';
 
-const CompanyIcon = () => <img src={companyIcon} alt='company icon'  />;
-const LocationIcon = () => <img src={locationIcon} alt='company icon'  />;
-const TwitterIcon = () => <img src={twitterIcon} alt='company icon'  />;
-const BlogIcon = () => <img src={blogIcon} alt='company icon'  />;
+const LocationIcon = () => (
+   <img src={locationIcon} className={styles['icon']} alt='location icon' />
+);
+const CompanyIcon = () => <img src={companyIcon} className={styles['icon']} alt='company icon' />;
+const BlogIcon = () => <img src={blogIcon} className={styles['icon']} alt='blog icon' />;
+const TwitterIcon = () => <img src={twitterIcon} className={styles['icon']} alt='twitter icon' />;
 
 type TypeUserInfoProps = Pick<TypeLocalGithubUser, 'blog' | 'company' | 'location' | 'twitter'>;
 
-const UserInfo = ({ blog, company, location, twitter }: TypeUserInfoProps) => {
+const UserInfo = ({ location, company, blog, twitter }: TypeUserInfoProps) => {
    const items: IInfoItemProps[] = [
       {
          icon: <LocationIcon />,
          text: location,
       },
+      {
+         icon: <CompanyIcon />,
+         text: company,
+      },
+
       {
          icon: <BlogIcon />,
          text: blog,
@@ -28,16 +35,12 @@ const UserInfo = ({ blog, company, location, twitter }: TypeUserInfoProps) => {
          icon: <TwitterIcon />,
          text: twitter,
       },
-      {
-         icon: <CompanyIcon />,
-         text: company,
-      },
    ];
 
    return (
       <div className={styles['userInfo']}>
-         {items.map((item, index) => (
-            <InfoItem {...item} key={index} />
+         {items.map((item, idx) => (
+            <InfoItem {...item} key={idx} />
          ))}
       </div>
    );

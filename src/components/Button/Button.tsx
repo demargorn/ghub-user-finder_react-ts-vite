@@ -6,7 +6,7 @@ interface IButtonProps {
 }
 
 const Button = ({ children, onClick }: IButtonProps) => (
-   <button className={styles.button} onClick={onClick}>
+   <button className={styles['button']} onClick={onClick}>
       {children}
    </button>
 );
