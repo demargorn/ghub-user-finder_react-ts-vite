@@ -2,6 +2,8 @@
 
 Учебный проект написан на языке TypeScript с использованием библиотеки React и собран при помощи Vite
 
+![alt text](public/example.png)
+
 ## Описание
 
 Простое приложение для поиска пользователей на GitHub
@@ -28,7 +30,6 @@ ghub-user-finder_react-ts-vite.git
 
 ```bash
 cd ghub-user-finder_react-ts-vite
-
 ```
 
 3. Установите зависимости:
@@ -48,7 +49,6 @@ yarn run dev
 ```
 
 Приложение будет доступно по адресу http://localhost:5173/ghub-user-finder_react-ts-vite/
-
 
 ## Контакты
 
