@@ -1,6 +1,6 @@
 # Developer Finder App
 
-Учебный проект написан на языке TypeScript с использованием библиотеки React и собран при помощи Vite
+Приложение разработано на языке TypeScript с использованием библиотеки React и собран при помощи Vite
 
 ![alt text](public/example.png)
 
